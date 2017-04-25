@@ -19,8 +19,8 @@ public class Spawneo : MonoBehaviour {
         if (timer > 2)
         {
             objtToSpawn = Random.Range(0, objsToSpawn.Length);
-            placeToSpawn.x = Random.Range(0, objtToSpawn);
-            placeToSpawn.z = Random.Range(0, objtToSpawn);
+            placeToSpawn.x = Random.Range(-rangoSpawn, rangoSpawn);
+            placeToSpawn.z = Random.Range(-rangoSpawn, rangoSpawn);
 
             Instantiate(objsToSpawn[objtToSpawn], placeToSpawn, transform.rotation);
             timer = 0;
